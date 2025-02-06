@@ -17,4 +17,5 @@ Feature: Product - Store
       | usuario              | password   | categoria | subcategoria | cantidad |
       | gingersc@hotmail.com | B&G082015/ | Clothes   | Men          | 2        |
       | gingersc@hotmail.com | 1234567890 | Clothes   | Men          | 1        |
+      | gingersc@hotmail.com | B&G082015/ | Car       | New          | 2        |
 

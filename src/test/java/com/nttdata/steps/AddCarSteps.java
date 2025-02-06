@@ -24,6 +24,10 @@ public class AddCarSteps {
     }
 
     public void selectCategory(String category){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(., '" + category + "')]")));
+
         WebElement categoryMenuElement = this.driver.findElement(By.xpath("//a[contains(., '" + category + "')]"));
         Actions actions = new Actions(driver);
         actions.moveToElement(categoryMenuElement).perform();
